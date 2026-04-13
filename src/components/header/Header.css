@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 🔥 MAIN HEADER */
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    position: relative;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(/ru.jpg) no-repeat center/cover;
+}
+
+/* 🔹 LEFT SIDE */
+.left {
+    width: 50%;
+    color: white;
+}
+
+.headerTitle {
+    font-size: 4rem;
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+    color: #cccccc;
+}
+
+/* 🔹 HIGHLIGHT */
+.mark {
+    background-color: #00FFD1;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* 🔹 BUTTON */
+.btn-header {
+    width: 170px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background: #00FFD1;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 RIGHT SIDE */
+.right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-right {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #8080809a;
+
+    animation: moveImg 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveImg {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+.img-right:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 MARQUEE */
+.marquee {
+    position: absolute;
+    bottom: 100px;
+    color: #00FFD1;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        padding: 40px 20px;
+        height: 100vh;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .headerTitle {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        margin: 10px 0 15px;
+    }
+
+    .btn-header {
+        width: 150px;
+        height: 40px;
+    }
+
+    .right {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .img-right {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .marquee {
+        position: static;
+        margin-top: 20px;
+    }
+}
