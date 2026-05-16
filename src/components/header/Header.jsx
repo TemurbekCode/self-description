@@ -13,7 +13,9 @@ function Header() {
                     High School Student
                 </h2>
 
-                <button className="btn-header">Get Started</button>
+                <a href="contact">
+                    <button className="btn-header">Get Started</button>
+                </a>
             </div>
 
             <div className="right">

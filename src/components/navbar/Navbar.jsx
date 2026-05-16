@@ -23,9 +23,8 @@ function Navbar() {
                 <div className={`nav-links ${menuOpen ? "active" : ""}`}>
                     <Link to="/" className="nav-link" onClick={closeAll}>Home</Link>
                     <Link to="/about" className="nav-link" onClick={closeAll}>About</Link>
-                    <Link to="/photos" className="nav-link" onClick={closeAll}>Photos</Link>
                     <Link to="/skills" className="nav-link" onClick={closeAll}>Skills</Link>
-                    <Link to="/register" className="nav-link" onClick={closeAll}>Register</Link>
+                    <Link to="/contact" className="nav-link" onClick={closeAll}>Contact</Link>
                 </div>
 
                 {/* RIGHT */}

@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.skills {
+    width: 100%;
+    min-height: 100vh;
+    background: #050505;
+    padding: 100px 80px;
+}
+
+/* TOP */
+
+.skills-top {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.skills-title {
+    font-size: 4.5em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.skills-subtitle {
+    color: #9f9f9f;
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CONTAINER */
+
+.skills-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+/* CARD */
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 22px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 255, 209, 0.08);
+    border-radius: 50%;
+    top: -60px;
+    right: -60px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: #00FFD1;
+    box-shadow: 0 0 30px rgba(0, 255, 209, 0.15);
+}
+
+/* INFO */
+
+.skill-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.skill-info h2 {
+    color: white;
+    font-size: 1.4em;
+}
+
+.skill-info span {
+    color: #00FFD1;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* LINE */
+
+.skill-line {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    border-radius: 30px;
+    background: linear-gradient(to right, #00FFD1, #00c3ff);
+    animation: fill 2s ease;
+}
+
+.html {
+    width: 95%;
+}
+
+.css {
+    width: 90%;
+}
+
+.js {
+    width: 85%;
+}
+
+.react {
+    width: 40%;
+}
+
+.ui {
+    width: 55%;
+}
+
+.communication {
+    width: 98%;
+}
+
+@keyframes fill {
+
+    from {
+        width: 0;
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .skills {
+        padding: 70px 20px;
+    }
+
+    .skills-title {
+        font-size: 2.8em;
+    }
+
+    .skills-subtitle {
+        font-size: 1em;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 25px;
+    }
+
+    .skill-info h2 {
+        font-size: 1.1em;
+    }
+
+}
